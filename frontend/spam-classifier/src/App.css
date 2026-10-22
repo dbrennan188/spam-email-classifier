@@ -1,0 +1,115 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #0f172a;
+  color: #f1f5f9;
+  font-family: Inter, system-ui, sans-serif;
+}
+
+.app-container {
+  width: min(100% - 32px, 680px);
+  margin: 0 auto;
+  padding: 64px 0;
+}
+
+.app-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.app-header h1 {
+  font-size: clamp(28px, 5vw, 40px);
+  letter-spacing: -1px;
+  margin-bottom: 8px;
+}
+
+.app-header p {
+  color: #94a3b8;
+}
+
+.input-card,
+.result-card {
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 16px;
+  padding: 28px;
+  margin-bottom: 20px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+}
+
+.input-card textarea {
+  width: 100%;
+  min-height: 150px;
+  padding: 16px;
+  resize: vertical;
+  background: #0f172a;
+  color: #f1f5f9;
+  border: 1px solid #475569;
+  border-radius: 10px;
+  font: inherit;
+}
+
+.input-card textarea:focus {
+  outline: none;
+  border-color: #60a5fa;
+  box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.15);
+}
+
+.check-button {
+  width: 100%;
+  padding: 14px;
+  margin-top: 16px;
+  border: none;
+  border-radius: 10px;
+  background: #3b82f6;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.check-button:hover {
+  background: #2563eb;
+  transform: translateY(-2px);
+}
+
+.result-card {
+  text-align: center;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.confidence-container {
+  display: flex;
+  justify-content: center;
+  margin: 24px 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.progress-ring-circle {
+  transform: rotate(270deg);
+  transform-origin: 50% 50%;
+  animation: fillRing 1.5s ease-out forwards;
+}
+
+@keyframes fillRing {
+  from {
+    stroke-dashoffset: var(--circumference);
+  }
+}

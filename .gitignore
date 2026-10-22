@@ -1,0 +1,23 @@
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+
+# Node / React
+node_modules/
+dist/
+
+# Environment-specific files
+.env.*
+!.env.example
+
+# Editor and OS
+.vscode/
+.DS_Store
+
+#pkl files
+spam_model.pkl
+vectorizer.pkl
